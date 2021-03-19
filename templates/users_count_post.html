@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+{% block title %}Articles{% endblock title %}
+
+{% block content %}
+  {% for user in user_posts %}
+    <div class="card">
+      <div class="card-header">
+        <p>{{user}} has written {{ user.total_posts }} posts<p>
+      </div>
+
+    </div>
+    <br />
+  {% endfor %}
+{% endblock content %}
